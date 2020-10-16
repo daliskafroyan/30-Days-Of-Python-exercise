@@ -43,7 +43,6 @@ print('{}, {}, {}, {}'.format(china, russia, usa, scandic))
 # Add the min age and the max age again to the list
 # Find the median age (one middle item or two middle items divided by two)
 # Find the average age (sum of all items divided by their number )
-# Find the range of the ages (max minus min)
 # Compare the value of (min - average) and (max - average), use abs() method
 ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 ages.sort()
@@ -59,3 +58,9 @@ if len(ages) % 2 == 0:
 else:
     median = ages[(int(len(ages)/2))]
 print(median)
+
+average = sum(ages)/len(ages)
+print(average)
+
+print('value of min - average: {} & value of max - average {}'.format(
+    abs(max(ages)-average), abs(min(ages)-average)))
